@@ -13,7 +13,7 @@ class UserController extends Controller
     public function show(User $user)
     {
         if ($user->isEmployer()) {
-            abort(403,'Forbidden');
+            abort(403, 'Forbidden');
         }
         $user->load('vacation');
 
